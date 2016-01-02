@@ -18,3 +18,5 @@ RUN apt-get -y install mysql-client
 RUN apt-get -y install kamailio kamailio-extra-modules kamailio-ims-modules kamailio-mysql-modules kamailio-nth kamailio-presence-modules kamailio-tls-modules kamailio-websocket-modules kamailio-xml-modules kamailio-xmpp-modules
 RUN apt-get -y install net-tools
 RUN apt-get clean
+
+COPY store/etc/default/kamailio /etc/default/
