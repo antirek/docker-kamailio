@@ -21,4 +21,6 @@ RUN apt-get -y install net-tools
 
 RUN apt-get clean
 
+RUN apt-get install -y htop
+
 COPY store/etc/default/kamailio /etc/default/
