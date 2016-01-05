@@ -24,3 +24,17 @@ RUN apt-get clean
 RUN apt-get install -y htop
 
 COPY store/etc/default/kamailio /etc/default/
+
+WORKDIR /tmp
+
+RUN apt-get install -y make git && \
+    git clone https://github.com/sippy/rtpproxy.git && \
+    cd rtpproxy && \
+    ./configure && make && make install
+
+
+COPY store/etc/rtpproxy/rtpproxy.conf  /etc/default/rtpproxy
+
+COPY store/etc/rtpproxy/rtpproxy /etc/init.d/
+
+RUN chmod 755 /etc/init.d/rtpproxy
