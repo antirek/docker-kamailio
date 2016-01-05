@@ -2,5 +2,6 @@
 
 docker run \
 	-v $(pwd)/store/etc/kamailio:/etc/kamailio \
+	-e PUBLIC_IP=192.168.1.41 \
 	--net=host \
 	-it antirek/kamailio
