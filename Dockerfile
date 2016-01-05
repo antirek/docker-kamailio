@@ -8,8 +8,8 @@ RUN apt-get install -y curl ntpdate lsb-release locales
 RUN apt-get upgrade -y
 
 RUN curl http://deb.kamailio.org/kamailiodebkey.gpg | apt-key add -
-RUN echo "deb http://deb.kamailio.org/kamailio43 trusty main" > /etc/apt/sources.list.d/kamailio.list
-RUN echo "deb-src http://deb.kamailio.org/kamailio43 trusty main" >> /etc/apt/sources.list.d/kamailio.list
+RUN echo "deb http://deb.kamailio.org/kamailio42 trusty main" > /etc/apt/sources.list.d/kamailio.list
+RUN echo "deb-src http://deb.kamailio.org/kamailio42 trusty main" >> /etc/apt/sources.list.d/kamailio.list
 
 RUN apt-get update
 RUN apt-get install -y rsyslog procps supervisor

@@ -1,1 +1,1 @@
-docker build -t antirek/kamailio .
+docker build --no-cache -t antirek/kamailio .
