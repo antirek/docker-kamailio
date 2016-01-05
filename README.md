@@ -19,5 +19,7 @@ http://www.slideshare.net/ChienChengWu/kamailio-on-docker
 
 http://nil.uniza.sk/kis
 
+https://beingasysadmin.wordpress.com/2014/02/23/building-im-server-using-kamailio/
+
 
 
