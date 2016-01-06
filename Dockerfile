@@ -35,3 +35,17 @@ RUN adduser --quiet --system --group --disabled-password \
             --home /var/run/kamailio kamailio
 
 RUN chown kamailio:kamailio /var/run/kamailio
+
+
+## RTPproxy
+
+RUN cd /tmp && \
+    git clone https://github.com/sippy/rtpproxy.git && \
+    cd rtpproxy && \
+    ./configure && make && make install
+
+COPY store/etc/rtpproxy/rtpproxy.conf  /etc/default/rtpproxy
+
+COPY store/etc/rtpproxy/rtpproxy /etc/init.d/
+
+RUN chmod 755 /etc/init.d/rtpproxy
