@@ -7,11 +7,7 @@
 # will use their internal default values.
 
 ## your SIP domain
-SIP_DOMAIN=$DOMAIN
-DOMAIN_ALIAS=$DOMAIN
-MY_IP_ADDR=192.168.1.41
-MY_DOMAIN=$DOMAIN
-PUBLIC_IP=$PUBLIC_IP
+# SIP_DOMAIN=kamailio.org
 
 ## chrooted directory
 # $CHROOT_DIR="/path/to/chrooted/directory"
@@ -21,37 +17,38 @@ PUBLIC_IP=$PUBLIC_IP
 #
 # If you want to setup a database with kamdbctl, you must at least specify
 # this parameter.
-DBENGINE=MYSQL
+# DBENGINE=MYSQL
 
 ## database host
-DBHOST=127.0.0.1
+# DBHOST=localhost
 
 ## database name (for ORACLE this is TNS name)
-DBNAME=kamailio
+# DBNAME=kamailio
 
 # database path used by dbtext, db_berkeley or sqlite
 # DB_PATH="/usr/local/etc/kamailio/dbtext"
 
 ## database read/write user
-DBRWUSER="kamailio"
+# DBRWUSER="kamailio"
 
 ## password for database read/write user
-DBRWPW="kamailiorw"
+# DBRWPW="kamailiorw"
 
 ## database read only user
-DBROUSER="kamailioro"
+# DBROUSER="kamailioro"
 
 ## password for database read only user
-DBROPW="kamailioro"
+# DBROPW="kamailioro"
 
 ## database access host (from where is kamctl used)
-DBACCESSHOST=127.0.0.1
+# DBACCESSHOST=192.168.0.1
 
 ## database super user (for ORACLE this is 'scheme-creator' user)
-DBROOTUSER="root"
+# DBROOTUSER="root"
 
 # user name column
 # USERCOL="username"
+
 
 # SQL definitions
 # If you change this definitions here, then you must change them 
@@ -95,17 +92,14 @@ DBROOTUSER="root"
 # for an answer, while yes/no allow for automated, unassisted installs.
 #
 
-# Uses this charset when creating new db
-CHARSET=utf8
-
 # If to install tables for the modules in the EXTRA_MODULES variable.
-INSTALL_EXTRA_TABLES=yes
+# INSTALL_EXTRA_TABLES=ask
 
 # If to install presence related tables.
-INSTALL_PRESENCE_TABLES=yes
+# INSTALL_PRESENCE_TABLES=ask
 
 # If to install uid modules related tables.
-INSTALL_DBUID_TABLES=yes
+# INSTALL_DBUID_TABLES=ask
 
 # Define what module tables should be installed.
 # If you use the postgres database and want to change the installed tables, then you
@@ -123,14 +117,14 @@ INSTALL_DBUID_TABLES=yes
 
 ## type of aliases used: DB - database aliases; UL - usrloc aliases
 ## - default: none
-ALIASES_TYPE="DB"
+# ALIASES_TYPE="DB"
 
 ## control engine: FIFO or UNIXSOCK
 ## - default FIFO
-CTLENGINE="FIFO"
+# CTLENGINE="FIFO"
 
 ## path to FIFO file
-# FIFOPATH="/tmp/kamailio_fifo"
+# FIFOPATH="/var/run/kamailio/kamailio_fifo"
 
 ## check ACL names; default on (1); off (0)
 # VERIFY_ACL=1
@@ -140,7 +134,7 @@ CTLENGINE="FIFO"
 # ACL_GROUPS="local ld int voicemail free-pstn"
 
 ## verbose - debug purposes - default '0'
-VERBOSE=3
+# VERBOSE=1
 
 ## do (1) or don't (0) store plaintext passwords
 ## in the subscriber table - default '1'
@@ -148,7 +142,7 @@ VERBOSE=3
 
 ## Kamailio START Options
 ## PID file path - default is: /var/run/kamailio.pid
-PID_FILE=/var/run/kamailio/kamailio.pid
+# PID_FILE=/var/run/kamailio/kamailio.pid
 
 ## Extra start options - default is: not set
 # example: start Kamailio with 64MB share memory: STARTOPTIONS="-m 64"
