@@ -14,15 +14,15 @@
 
 . /lib/lsb/init-functions
 
-PATH=/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/sbin/kamailio
+PATH=/sbin:/bin:/usr/sbin:/usr/bin:/usr/local/sbin
+DAEMON=/usr/local/sbin/kamailio
 NAME=`basename "$0"`
 DESC="Kamailio SIP Server"
 HOMEDIR=/var/run/$NAME
 PIDFILE=$HOMEDIR/$NAME.pid
 DEFAULTS=/etc/default/$NAME
 CFGFILE=/etc/$NAME/kamailio.cfg
-RUN_KAMAILIO=no
+RUN_KAMAILIO=yes
 USER=kamailio
 GROUP=kamailio
 # Amount of shared and private memory to allocate

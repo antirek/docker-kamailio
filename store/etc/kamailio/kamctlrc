@@ -17,34 +17,34 @@
 #
 # If you want to setup a database with kamdbctl, you must at least specify
 # this parameter.
-# DBENGINE=MYSQL
+DBENGINE=MYSQL
 
 ## database host
-# DBHOST=localhost
+DBHOST=127.0.0.1
 
 ## database name (for ORACLE this is TNS name)
-# DBNAME=kamailio
+DBNAME=kamailio
 
 # database path used by dbtext, db_berkeley or sqlite
 # DB_PATH="/usr/local/etc/kamailio/dbtext"
 
 ## database read/write user
-# DBRWUSER="kamailio"
+DBRWUSER="kamailio"
 
 ## password for database read/write user
-# DBRWPW="kamailiorw"
+DBRWPW="kamailiorw"
 
 ## database read only user
-# DBROUSER="kamailioro"
+DBROUSER="kamailioro"
 
 ## password for database read only user
-# DBROPW="kamailioro"
+DBROPW="kamailioro"
 
 ## database access host (from where is kamctl used)
-# DBACCESSHOST=192.168.0.1
+DBACCESSHOST=127.0.0.1
 
 ## database super user (for ORACLE this is 'scheme-creator' user)
-# DBROOTUSER="root"
+DBROOTUSER="root"
 
 # user name column
 # USERCOL="username"
@@ -142,7 +142,7 @@
 
 ## Kamailio START Options
 ## PID file path - default is: /var/run/kamailio.pid
-# PID_FILE=/var/run/kamailio/kamailio.pid
+PID_FILE=/var/run/kamailio/kamailio.pid
 
 ## Extra start options - default is: not set
 # example: start Kamailio with 64MB share memory: STARTOPTIONS="-m 64"

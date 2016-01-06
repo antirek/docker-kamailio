@@ -23,3 +23,21 @@ RUN cd /usr/local/src/kamailio-4.3/kamailio && \
     make include_modules="db_mysql dialplan nth presence xmpp xml websocket tls ims" cfg && \
     make Q=0 all && \
     make install
+
+RUN apt-get install -y mysql-client
+
+RUN mkdir /tmp2
+
+COPY store/etc/default/kamailio.default /etc/default/kamailio
+
+COPY store/etc/init.d/kamailio.init /etc/init.d/kamailio
+
+RUN chmod 755 /etc/init.d/kamailio 
+
+RUN mkdir -p /var/run/kamailio
+
+RUN adduser --quiet --system --group --disabled-password \
+            --shell /bin/false --gecos "Kamailio" \
+            --home /var/run/kamailio kamailio
+
+RUN chown kamailio:kamailio /var/run/kamailio
