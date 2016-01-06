@@ -21,5 +21,9 @@ http://nil.uniza.sk/kis
 
 https://beingasysadmin.wordpress.com/2014/02/23/building-im-server-using-kamailio/
 
+http://nil.uniza.sk/sip/kamailio/configuring-kamailio-4x-websocket
 
+https://github.com/caruizdiaz/kamailio-ws
+
+http://www.kamailio.org/wiki/install/4.3.x/git
 

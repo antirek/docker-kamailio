@@ -49,3 +49,21 @@ COPY store/etc/rtpproxy/rtpproxy.conf  /etc/default/rtpproxy
 COPY store/etc/rtpproxy/rtpproxy /etc/init.d/
 
 RUN chmod 755 /etc/init.d/rtpproxy
+
+
+## RTPengine 
+
+RUN cd /tmp && \
+    git clone git://github.com/redis/hiredis.git && \
+    cd hiredis && \
+    make && make install
+
+RUN apt-get install -y build-essential libglib2.0-dev
+
+RUN apt-get install -y libxmlrpc-core-c3-dev
+
+RUN cd /tmp && \
+    git clone https://github.com/sipwise/rtpengine.git && \
+    cd rtpengine/daemon && \
+    make && \
+    cp -u rtpengine /usr/bin/

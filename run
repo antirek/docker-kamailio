@@ -2,5 +2,6 @@
 
 docker run \
 	-v $(pwd)/store/etc/kamailio:/etc/kamailio \
+	-v $(pwd)/store/etc/run:/etc/run \
 	--net=host \
 	-it antirek/kamailio
