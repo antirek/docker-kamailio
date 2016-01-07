@@ -27,3 +27,6 @@ https://github.com/caruizdiaz/kamailio-ws
 
 http://www.kamailio.org/wiki/install/4.3.x/git
 
+http://voiplab.by/wiki/new-voip-technology/45-mesto-servisa-webrtc-v-seti-operatora-ims
+
+http://www.slideshare.net/crocodilertc/kamailio-world-2014-the-platform-for-interoperable-web-rtc
