@@ -30,3 +30,17 @@ http://www.kamailio.org/wiki/install/4.3.x/git
 http://voiplab.by/wiki/new-voip-technology/45-mesto-servisa-webrtc-v-seti-operatora-ims
 
 http://www.slideshare.net/crocodilertc/kamailio-world-2014-the-platform-for-interoperable-web-rtc
+
+https://blog.voipxswitch.com/2015/08/11/rtpengine-with-kamailio-as-load-balancer-and-ip-gateway/
+
+http://lists.sipwise.com/pipermail/spce-user/2014-December/007902.html
+
+https://blog.voipxswitch.com/2015/03/27/kamailio-basic-sip-proxy-all-requests-setup/
+
+http://tamkovich.com/2009/11/building-telephony-systems-with-openser/
+
+http://kamailio.org/events/2015-ClueCon/dcm-kamailio-api-routing.pdf
+
+!! https://www.opennet.ru/base/net/asterisk_balance.txt.html
+
+
